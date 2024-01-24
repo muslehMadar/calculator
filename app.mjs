@@ -10,7 +10,7 @@ const port = 4242;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-mongoose
+/*mongoose
 	.connect(
 		"mongodb+srv://malmadar36:musleh36@myfirstdatabase.8efurkp.mongodb.net/?retryWrites=true&w=majority"
 	)
@@ -19,7 +19,7 @@ mongoose
 	})
 	.catch((error) => {
 		console.log("error with connecting with the DB ", error);
-	});
+	});*/
 
 app.get('/calculator', async (req, res) => {
     const indexPath = path.join(__dirname, 'views', 'calculator.html');
