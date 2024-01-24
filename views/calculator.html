@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>calculator</title>
+  </head>
+  <body>
+    <style>
+      body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f0f0; 
+}
+
+h3 {
+  margin-top: 20px; 
+  text-align: center;
+  background-color: #3498db; 
+  padding: 10px; 
+  border-radius: 10px; 
+  color: #ffffff; 
+}
+      body {
+  padding: 0;
+  margin: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.plus input {
+  width: 100px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size: larger;
+  text-align: center;
+}
+
+.minus input {
+  width: 100px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size: larger;
+  text-align: center;
+}
+
+.times input {
+  width: 100px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size: larger;
+  text-align: center;
+}
+
+.division input {
+  width: 100px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size: larger;
+  text-align: center;
+}
+
+    </style>
+    <div class="main">
+      <div class="plus">
+        <input id="plus1" type="number" />
+        +
+        <input id="plus2" type="number" />
+        =
+        <input id="plusSum" type="text" disabled="true" />
+      </div>
+      <div class="minus">
+        <input id="minus1" type="number" />
+        -
+        <input id="minus2" type="number" />
+        =
+        <input id="minusSum" type="text" disabled="true" />
+      </div>
+      <div class="times">
+        <input id="times1" type="number" />
+        *
+        <input id="times2" type="number" />
+        =
+        <input id="timesSum" type="text" disabled="true" />
+      </div>
+      <div class="division">
+        <input id="division1" type="number" />
+        /
+        <input id="division2" type="number" />
+        =
+        <input id="divisionSum" type="text" disabled="true" />
+      </div>
+    </div>
+    <script>
+      let plus1 = document.getElementById("plus1");
+let plus2 = document.getElementById("plus2");
+let plusSum = document.getElementById("plusSum");
+let minus1 = document.getElementById("minus1");
+let minus2 = document.getElementById("minus2");
+let minusSum = document.getElementById("minusSum");
+let times1 = document.getElementById("times1");
+let times2 = document.getElementById("times2");
+let timesSum = document.getElementById("timesSum");
+let division1 = document.getElementById("division1");
+let division2 = document.getElementById("division2");
+let divisionSum = document.getElementById("divisionSum");
+
+plus1.addEventListener("input", (e) => {
+  let plusField1 = parseInt(plus1.value);
+  let plusField2 = parseInt(plus2.value);
+  let sum = plusField1 + plusField2;
+  plusSum.value = sum;
+});
+plus2.addEventListener("input", (e) => {
+  let plusField1 = parseInt(plus1.value);
+  let plusField2 = parseInt(plus2.value);
+  let sum = plusField1 + plusField2;
+  plusSum.value = sum;
+});
+
+minus1.addEventListener("input", (e) => {
+  let minusField1 = parseInt(minus1.value);
+  let minusField2 = parseInt(minus2.value);
+  let sum = minusField1 - minusField2;
+  minusSum.value = sum;
+});
+minus2.addEventListener("input", (e) => {
+  let minusField1 = parseInt(minus1.value);
+  let minusField2 = parseInt(minus2.value);
+  let sum = minusField1 - minusField2;
+  minusSum.value = sum;
+});
+
+times1.addEventListener("input", (e) => {
+  let timesField1 = parseInt(times1.value);
+  let timesField2 = parseInt(times2.value);
+  let sum = timesField1 * timesField2;
+  timesSum.value = sum;
+});
+times2.addEventListener("input", (e) => {
+  let timesField1 = parseInt(times1.value);
+  let timesField2 = parseInt(times2.value);
+  let sum = timesField1 * timesField2;
+  timesSum.value = sum;
+});
+
+division1.addEventListener("input", (e) => {
+  let divisionField1 = parseInt(division1.value);
+  let divisionField2 = parseInt(division2.value);
+  let sum = divisionField1 / divisionField2;
+  divisionSum.value = sum;
+});
+division2.addEventListener("input", (e) => {
+  let divisionField1 = parseInt(division1.value);
+  let divisionField2 = parseInt(division2.value);
+  let sum = divisionField1 / divisionField2;
+  divisionSum.value = sum;
+});
+    </script>
+    <h3>تم التطوير بواسطة مصلح مدار و عبدالله باجنيد</h3>
+  </body>
+</html>
