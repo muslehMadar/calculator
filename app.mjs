@@ -2,8 +2,8 @@ import express from 'express';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import path from 'path'
-import Article from './models/Article.mjs';
-import mongoose from 'mongoose'
+//import Article from './models/Article.mjs';
+//import mongoose from 'mongoose'
 const app = express();
 const port = 4242;
 
